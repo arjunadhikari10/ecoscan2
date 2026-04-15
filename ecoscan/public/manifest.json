@@ -1,0 +1,23 @@
+{
+  "name": "EcoScan — Fight Plastic Pollution",
+  "short_name": "EcoScan",
+  "description": "AI-powered plastic pollution tracker for Nepal. Scan, learn, and take action.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f5f8f6",
+  "theme_color": "#1a7a4a",
+  "orientation": "portrait",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ],
+  "categories": ["environment", "education", "lifestyle"],
+  "lang": "en-NP",
+  "screenshots": [],
+  "share_target": {
+    "action": "/scan",
+    "method": "POST",
+    "enctype": "multipart/form-data",
+    "params": { "files": [{ "name": "image", "accept": ["image/*"] }] }
+  }
+}
