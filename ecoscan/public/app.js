@@ -1304,6 +1304,7 @@ function renderCommunity() {
     </div>`;
   }).join('') || `<div class="tip-card">No posts in this feed yet. Try switching filter or creating a new story.</div>`;
   return `
+  <div class="community-layout">
   <div class="community-page">
     <div class="page-header">
       <div class="community-hdr-row">
@@ -1348,6 +1349,29 @@ function renderCommunity() {
       <div class="add-story-txt">✍️ Share your eco story</div>
       <div class="add-story-sub">Inspire others in Nepal to take action</div>
     </div>
+  </div>
+  <aside class="community-right-rail">
+    <div class="rail-card">
+      <div class="rail-title">Activity Snapshot</div>
+      <div class="rail-row"><span>🔥 Active users nearby</span><strong>128</strong></div>
+      <div class="rail-row"><span>🧹 Cleanup events this month</span><strong>${communityEvents.length}</strong></div>
+      <div class="rail-row"><span>💬 Community posts today</span><strong>${filteredStories.length}</strong></div>
+      <div class="rail-row"><span>🔔 Unread notifications</span><strong>${unreadCount}</strong></div>
+    </div>
+    <div class="rail-card">
+      <div class="rail-title">Trending Challenges</div>
+      <div class="rail-chip">Plastic-Free Week</div>
+      <div class="rail-chip">Bagmati Guardian</div>
+      <div class="rail-chip">BYO Bottle</div>
+      <div class="rail-chip">No-Plastic Market Day</div>
+    </div>
+    <div class="rail-card">
+      <div class="rail-title">Quick Links</div>
+      <button class="rail-btn" onclick="goToCommunityStories()">Go To Stories</button>
+      <button class="rail-btn" onclick="showAddStory()">Create Post</button>
+      <button class="rail-btn" onclick="navigate('rank')">View Leaderboard</button>
+    </div>
+  </aside>
   </div>`;
 }
 
